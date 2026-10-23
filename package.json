@@ -1,0 +1,30 @@
+{
+  "name": "dot-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digneson/DOT.COM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/digneson/DOT.COM/issues"
+  },
+  "homepage": "https://github.com/digneson/DOT.COM#readme",
+  "private": "true",
+  "workspaces": [
+    "apps/miniapp",
+    "apps/api",
+    "packages/shared"
+  ],
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
