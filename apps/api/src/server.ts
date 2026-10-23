@@ -30,17 +30,6 @@ app.get('/', async () => ({
   health: '/health'
 }));
 
-async function start() {
-  try {
-    await app.listen({ port, host });
-  } catch (error) {
-    app.log.error(error);
-    process.exit(1);
-  }
-}
-
-start();
-
 app.get('/health/database', async (_request, reply) => {
   const { error } = await (await import('./supabase.js')).supabase
     .from('dot_settings')
@@ -62,3 +51,15 @@ app.get('/health/database', async (_request, reply) => {
     database: 'connected'
   };
 });
+
+async function start() {
+  try {
+    await app.listen({ port, host });
+  } catch (error) {
+    app.log.error(error);
+    process.exit(1);
+  }
+}
+
+start();
+
